@@ -1,0 +1,23 @@
+{
+  "name": "vite3-mfa-vue3-test",
+  "version": "1.0.0",
+  "workspaces": [
+    "host",
+    "remote",
+    "remote-nuxt",
+    "remote-react"
+  ],
+  "scripts": {
+    "start": "pnpm start",
+    "serve": "pnpm --parallel --filter \"./**\" serve ",
+    "build": "pnpm --parallel --filter \"./host\" --filter \"./remote\" --filter \"./remote-react\" build ",
+    "build:remote-nuxt": "pnpm --parallel --filter \"./remote-nuxt\" build",
+    "premfa": "npm run build:remote-nuxt && npm run build",
+    "mfa": "npm run serve"
+  },
+  "devDependencies": {
+    "kill-port": "^2.0.1",
+    "vite-plugin-css-injected-by-js": "^2.2.0"
+  },
+  "license": "ISC"
+}
