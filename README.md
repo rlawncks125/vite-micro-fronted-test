@@ -1,4 +1,8 @@
-포든 폴더 들어가서 `npm install` 패키지 설치해주고
+모든 폴더 들어가서 `npm install` 패키지 설치해주고
+
+`npm run mfa` 하면 테스트할수 있다.
+
+host 주소는 localhost:5000(http://localhost:5000/) 로 접속하면된다.
 
 build 하면 assets/remoteEntry.js 위치에 파일이 생긴다.
 
@@ -13,6 +17,7 @@ federation({
     exposes: {
       "./Button": "./components/RButton.jsx",
     },
+    shared: ['vue', 'pinia']
   }),
 
 <!-- Host -->
