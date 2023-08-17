@@ -1,10 +1,16 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import { useCount } from '@/store/useCount.ts'
+import { toRefs } from 'vue'
+import { storeToRefs } from 'pinia'
+const { count } = storeToRefs(useCount())
+// const { incre, dcre } = useCount()
 </script>
 
 <template>
   <header>
-    <h2>Host</h2>
+    <h2>Host : {{ count }}</h2>
+    <!-- <div><button @click="incre">+</button><button @click="dcre">-</button></div> -->
     <RemoteButton />
     <RemoteNuxtButton />
 

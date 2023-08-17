@@ -37,6 +37,24 @@ federation({
 
 - 모듈 가져와서 랜더링
 
+### 상태관리
+
+- key값을 다르게 하면 독립적으로 작동됨
+- store를 공유할시 KEY 값을 똑같이 하되 구현은 host에서 구현
+
+### 상태관리 value 공유할시
+
+- pinia 생성시 같은 key로 설정하면 최종으로 host가 덮어씌움
+- key값을 똑같이 하여 value 공유 가능
+- remote에서 구현된 함수 기능으로 작동안돼고
+- host에서 구현된 함수 기능으로 작동됨
+
+### 상태 관리 err
+
+- err - nuxt는 shard : pinia 부터 오류가 발생
+- err 메시지 - Cannot read properties of undefined (reading '\_s')
+- err - nuxt pinia 설정이 Vue설정과 달라서 생긴 오류같음
+
 ### 할일
 
-- 상태 관리
+-

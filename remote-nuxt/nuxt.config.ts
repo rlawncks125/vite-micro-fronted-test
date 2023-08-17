@@ -13,7 +13,7 @@ export default defineNuxtConfig({
         exposes: {
           "./Button": "./components/Button.vue",
         },
-        // shared: ["pinia"],
+        // shared: [""],
       }),
     ],
     build: {
