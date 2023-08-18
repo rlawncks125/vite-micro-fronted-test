@@ -8,9 +8,9 @@ const { incre, dcre } = useCount();
 
 <template>
   <div>
-    <div class="btn-color">Remote Buuton 입니다. {{ count }}</div>
-    <button @click="incre">+</button>
-    <button @click="dcre">-</button>
+    <div class="btn-color text-[1.2rem]">Remote Buuton 입니다. {{ count }}</div>
+    <button class="p-4 bg-amber-200 border-2" @click="incre">+</button>
+    <button class="p-4 bg-amber-200 border-2" @click="dcre">-</button>
   </div>
 </template>
 
