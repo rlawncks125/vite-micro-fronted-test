@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { inject } from "vue";
-import { useCount } from "../store/useCount.ts";
+import { useCount } from "../store/useCount";
 import { storeToRefs } from "pinia";
 import { key as aswAlert } from "../plugins/alert";
 import ChildCompoent from "./child.vue";

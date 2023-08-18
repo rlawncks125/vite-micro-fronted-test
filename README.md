@@ -87,6 +87,30 @@ federation({
 
 ---
 
+## pnpm로 마이그레이션 할떄
+
+[pnpm , yarn berry 비교](https://medium.com/zigbang/%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%A7%A4%EB%8B%88%EC%A0%80-%EA%B7%B8%EA%B2%83%EC%9D%B4-%EA%B6%81%EA%B8%88%ED%95%98%EB%8B%A4-5bacc65fb05d)
+
+- pnpm-workspace.yml 생성
+- 다음 코드 삽입 ( workspaces 설정 )
+
+```
+"workspaces":
+  - "host"
+  - "remote"
+  - "remote-nuxt"
+  - "remote-react"
+
+```
+
+- `pnpm install` 의존성 파일 설치
+- package.json `"init": "pnpm --parallel --filter \"./**\" pnpm install ",` 명령줄 추가
+- `npm run init` 실행 하여 workspaces 파일 패키지 설치
+- nuxt는 vue 모듈이 설치가 안되서 에러뜸 `cd remote-nuxt` 후 `pnpm install` 패키지 다시 설치
+- `npm run mfa` 실행
+
+---
+
 ## 라이브러리 확인
 
 #### tailwind ( css 라이브러리 , 설계 생각 )
