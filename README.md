@@ -33,7 +33,7 @@ git clone 후 `yarn mfa:yarn` 명령시 테스트 할수 있음.
 
 - `"preinstall": "pnpm dlx only-allow pnpm"` 명령줄 추가
 - `pnpm install` 의존성 파일 설치
-- pnp 파일 삭지 `rm .pnp*`
+- yarn berry pnp 파일 삭제 `rm .pnp* .yarn* yarn.lock`
 - <del>nuxt는 vue 모듈이 설치가 안되서 에러뜸 `cd remote-nuxt` 후 `pnpm install` 패키지 다시 설치</del>
 - `npm run mfa` 실행
 
