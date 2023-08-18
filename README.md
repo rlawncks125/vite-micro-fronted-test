@@ -93,7 +93,7 @@ federation({
 
 - tailwind - 'jit' 모드를 사용하니 host에 tailwind.css 깔아도 jit는 사용하는 css가져오지 못함 ( host 가 remote의 해당 jit 값을 가지고 있지 않음)
 - tailwind jit 모드는 build,dev 시 class를 탐색하여 해당 class들을 css파일로 만들어주기때문에 원격에서 사용하는 값들을
-  host 에서 `<el class='jit값 , ... ~~~'>` 이렇게 정의해줘도 탐지하여 css 파일로 만들어준다.
+  host 에서 `<el class='jit값 , ... ~~~'>` 이렇게 정의 하고 주석 처리 해도 탐지하여 css 파일로 만들어준다.
 
 #### sweetalert2 ( js 라이브러리, 작동 o )
 
