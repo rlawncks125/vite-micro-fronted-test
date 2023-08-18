@@ -3,6 +3,7 @@ import { inject } from "vue";
 import { useCount } from "../store/useCount.ts";
 import { storeToRefs } from "pinia";
 import { key as aswAlert } from "../plugins/alert";
+import ChildCompoent from "./child.vue";
 
 const { count } = storeToRefs(useCount());
 const { incre, dcre } = useCount();
@@ -18,6 +19,7 @@ const onAlert = () => {
     <button class="p-4 bg-amber-200 border-2" @click="incre">+</button>
     <button class="p-4 bg-amber-200 border-2" @click="dcre">-</button>
     <button @click="onAlert">나 알람</button>
+    <ChildCompoent />
   </div>
 </template>
 
