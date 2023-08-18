@@ -105,7 +105,7 @@ federation({
 
 - `preinstall": "pnpm dlx only-allow pnpm` 명령줄 추가
 - `pnpm install` 의존성 파일 설치
-- nuxt는 vue 모듈이 설치가 안되서 에러뜸 `cd remote-nuxt` 후 `pnpm install` 패키지 다시 설치 `디렉터리 삭제후 다시 설치됩니다 질문이 뜨면 : N `
+- nuxt는 vue 모듈이 설치가 안되서 에러뜸 `cd remote-nuxt` 후 `pnpm install` 패키지 다시 설치
 - `npm run mfa` 실행
 
 ---
