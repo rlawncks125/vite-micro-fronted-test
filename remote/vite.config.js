@@ -15,6 +15,7 @@ export default defineConfig({
       exposes: {
         "./Button": "./src/components/Button.vue",
         "./Remotepage": "./src/views/Remote-Page.vue",
+        "./swAlert": "./src/plugins/alert.ts",
       },
       shared: ["vue", "pinia"],
     }),

@@ -8,6 +8,8 @@ import App from './App.vue'
 import router from './router'
 import '@/assets/tailwind.css'
 
+import swAlert from 'remote/swAlert'
+
 const app = createApp(App)
 
 const RemoteButton = defineAsyncComponent(() => import('remote/Button'))
@@ -18,6 +20,7 @@ app.component('RemoteButton', RemoteButton)
 app.component('RemoteNuxtButton', RemoteNuxtButton)
 app.component('RemoteReactButton', RemoteReactButton)
 app.use(createPinia())
+app.use(swAlert)
 app.use(router)
 
 app.mount('#app')

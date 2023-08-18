@@ -8527,6 +8527,7 @@ __metadata:
     pinia: ^2.1.4
     postcss: ^8.4.28
     sass: ^1.66.0
+    sweetalert2: ^11.7.23
     tailwindcss: ^3.3.3
     vite: ^4.4.6
     vue: ^3.3.4
@@ -9351,6 +9352,13 @@ __metadata:
   bin:
     svgo: bin/svgo
   checksum: 381ba14aa782e71ab7033227634a3041c11fa3e2769aeaf0df43a08a615de61925108e34f55af6e7c5146f4a3109e78deabb4fa9d687e36d45d1f848b4e23d17
+  languageName: node
+  linkType: hard
+
+"sweetalert2@npm:^11.7.23":
+  version: 11.7.23
+  resolution: "sweetalert2@npm:11.7.23"
+  checksum: 4161c9b6e8f80205f2bcb9fd277c820bd0a214e3fe043b8d0bcf060baf60e4b2942bd0906cf51706032a70dedb2f5be4b78c69340f00f6940a6de04b6a07a088
   languageName: node
   linkType: hard
 
