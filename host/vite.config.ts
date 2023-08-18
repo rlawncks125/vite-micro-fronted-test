@@ -14,7 +14,7 @@ export default defineConfig({
       remotes: {
         remote: 'http://localhost:5001/assets/remoteEntry.js',
         'remote-react': 'http://localhost:5003/assets/remoteEntry.js',
-        'remote-nuxt': '/nuxt/_nuxt/remoteEntry.js'
+        // 'remote-nuxt': '/nuxt/_nuxt/remoteEntry.js'
       },
       shared: ['vue', 'pinia']
     })

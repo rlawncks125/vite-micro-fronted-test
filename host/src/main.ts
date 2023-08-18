@@ -13,11 +13,11 @@ import swAlert from 'remote/swAlert'
 const app = createApp(App)
 
 const RemoteButton = defineAsyncComponent(() => import('remote/Button'))
-const RemoteNuxtButton = defineAsyncComponent(() => import('remote-nuxt/Button'))
+// const RemoteNuxtButton = defineAsyncComponent(() => import('remote-nuxt/Button'))
 const RemoteReactButton = defineAsyncComponent(() => reactImport(import('remote-react/Button')))
 
 app.component('RemoteButton', RemoteButton)
-app.component('RemoteNuxtButton', RemoteNuxtButton)
+// app.component('RemoteNuxtButton', RemoteNuxtButton)
 app.component('RemoteReactButton', RemoteReactButton)
 app.use(createPinia())
 app.use(swAlert)

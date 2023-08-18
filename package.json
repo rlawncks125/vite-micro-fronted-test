@@ -14,8 +14,8 @@
     "build:remote-nuxt": "pnpm --parallel --filter \"./remote-nuxt\" build",
     "premfa": "npm run build:remote-nuxt && npm run build",
     "mfa": "npm run serve",
-    "mfa:build": "concurrently \"yarn --cwd run ./host build\"  \"yarn --cwd run ./remote build\" \"yarn --cwd run ./remote-react build\" \"yarn --cwd run ./remote-nuxt build\"",
-    "mfa:serve": "concurrently \"yarn --cwd run ./host serve\"  \"yarn --cwd run ./remote serve\" \"yarn --cwd run ./remote-react serve\" \"yarn --cwd run ./remote-nuxt serve\"",
+    "mfa:build": "concurrently \"yarn --cwd run ./host build\"  \"yarn --cwd run ./remote build\" \"yarn --cwd run ./remote-react build\" ",
+    "mfa:serve": "concurrently \"yarn --cwd run ./host serve\"  \"yarn --cwd run ./remote serve\" \"yarn --cwd run ./remote-react serve\" ",
     "mfa:yarn": "yarn mfa:build && yarn mfa:serve"
   },
   "devDependencies": {

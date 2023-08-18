@@ -12,7 +12,7 @@ const { count } = storeToRefs(useCount())
     <h2>Host : {{ count }}</h2>
     <!-- <div><button @click="incre">+</button><button @click="dcre">-</button></div> -->
     <RemoteButton />
-    <RemoteNuxtButton />
+    <!-- <RemoteNuxtButton /> -->
 
     <RemoteReactButton />
 

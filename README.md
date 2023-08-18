@@ -2,11 +2,39 @@
 
 <del>`npm run mfa` 하면 테스트할수 있다.</del>
 
+#### nuxt는 build , serve 에서제외
+
+- pnpm : `cd remote-nuxt` 후 `pnpm install` 하면 됨
+- yarn : @nuxt/kit 에러로 build , serve 안됌
+
 ### yarn berry 로 마이그레이션
 
 zero-install 기능으로 인하여
 
-git clone 후 `yarn` 명령후 `yarn mfa:yarn` 명령시 테스트 할수 있음.
+git clone 후 `yarn mfa:yarn` 명령시 테스트 할수 있음.
+
+---
+
+## pnpm로 마이그레이션 할떄
+
+[pnpm , yarn berry 비교](https://medium.com/zigbang/%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%A7%A4%EB%8B%88%EC%A0%80-%EA%B7%B8%EA%B2%83%EC%9D%B4-%EA%B6%81%EA%B8%88%ED%95%98%EB%8B%A4-5bacc65fb05d)
+
+- pnpm-workspace.yaml 생성
+- 다음 코드 삽입 ( workspaces 설정 )
+
+```
+"workspaces":
+  - "host"
+  - "remote"
+  - "remote-nuxt"
+  - "remote-react"
+
+```
+
+- `"preinstall": "pnpm dlx only-allow pnpm"` 명령줄 추가
+- `pnpm install` 의존성 파일 설치
+- <del>nuxt는 vue 모듈이 설치가 안되서 에러뜸 `cd remote-nuxt` 후 `pnpm install` 패키지 다시 설치</del>
+- `npm run mfa` 실행
 
 ---
 
@@ -84,29 +112,6 @@ federation({
 
 - worckSpace
 - 패키지 의존성 관리 ( --save-dev 하는 라이브러리 기준을 아직 모르곘음)
-
----
-
-## pnpm로 마이그레이션 할떄
-
-[pnpm , yarn berry 비교](https://medium.com/zigbang/%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%A7%A4%EB%8B%88%EC%A0%80-%EA%B7%B8%EA%B2%83%EC%9D%B4-%EA%B6%81%EA%B8%88%ED%95%98%EB%8B%A4-5bacc65fb05d)
-
-- pnpm-workspace.yaml 생성
-- 다음 코드 삽입 ( workspaces 설정 )
-
-```
-"workspaces":
-  - "host"
-  - "remote"
-  - "remote-nuxt"
-  - "remote-react"
-
-```
-
-- `preinstall": "pnpm dlx only-allow pnpm` 명령줄 추가
-- `pnpm install` 의존성 파일 설치
-- nuxt는 vue 모듈이 설치가 안되서 에러뜸 `cd remote-nuxt` 후 `pnpm install` 패키지 다시 설치
-- `npm run mfa` 실행
 
 ---
 
