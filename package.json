@@ -13,11 +13,19 @@
     "build": "pnpm --parallel --filter \"./host\" --filter \"./remote\" --filter \"./remote-react\" build ",
     "build:remote-nuxt": "pnpm --parallel --filter \"./remote-nuxt\" build",
     "premfa": "npm run build:remote-nuxt && npm run build",
-    "mfa": "npm run serve"
+    "mfa": "npm run serve",
+    "mfa:build": "concurrently \"yarn --cwd run ./host build\"  \"yarn --cwd run ./remote build\" \"yarn --cwd run ./remote-react build\" \"yarn --cwd run ./remote-nuxt build\"",
+    "mfa:serve": "concurrently \"yarn --cwd run ./host serve\"  \"yarn --cwd run ./remote serve\" \"yarn --cwd run ./remote-react serve\" \"yarn --cwd run ./remote-nuxt serve\"",
+    "mfa:yarn": "yarn mfa:build && yarn mfa:serve"
   },
   "devDependencies": {
     "kill-port": "^2.0.1",
     "vite-plugin-css-injected-by-js": "^2.2.0"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "packageManager": "yarn@3.6.2",
+  "dependencies": {
+    "concurrently": "^8.2.0",
+    "nuxt": "^3.6.5"
+  }
 }

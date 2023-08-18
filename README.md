@@ -57,4 +57,8 @@ federation({
 
 ### 할일
 
--
+- package 충돌 확인
+- 1. tailwind.css ( css 라이브러리 )
+- 2. vue-simpe-alert ( js 라이브러리 )
+
+### yarn berry 마이그레이션

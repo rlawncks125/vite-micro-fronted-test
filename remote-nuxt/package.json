@@ -13,12 +13,14 @@
     "@nuxt/devtools": "latest",
     "@originjs/vite-plugin-federation": "^1.2.3",
     "@types/node": "^18.17.3",
+    "lru-cache": "^10.0.1",
     "nuxt": "^3.6.5"
   },
   "overrides": {
     "vue": "latest"
   },
   "dependencies": {
+    "@nuxt/kit": "3.6.1",
     "@pinia/nuxt": "^0.4.11",
     "pinia": "^2.1.6",
     "sass": "^1.65.1"
