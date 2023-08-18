@@ -16,6 +16,7 @@ export default defineConfig({
       exposes: {
         "./Button": "./components/RButton.jsx",
       },
+      shared: ["react"],
     }),
   ],
   build: {

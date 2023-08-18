@@ -107,4 +107,10 @@ federation({
 
 - 컴포넌트와 똑같이 작동 잘됨
 
+#### react useState in Vue ( 작동 안됌 )
+
+- 리액트 useState 작동안됌
+- host에 react 깔아봄 [x]
+- host에 react 깔고 선언함 [x]
+
 ### 할일
